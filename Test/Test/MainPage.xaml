@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:Test"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.MainPage" BackgroundColor="white"
+             NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Azure" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout>
+                    <RelativeLayout VerticalOptions="Center" Padding ="10" BackgroundColor="#B22D39">
+                        <Label Text="Fire Force" 
+                   TextColor="White" 
+                   FontSize="36" 
+                   FontAttributes="Bold"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
+                   RelativeLayout.YConstraint="25"
+                   />
+                        <Image Source="{local:ImageResource Test.images.fireLogo.png}" 
+                   WidthRequest="80"
+                   RelativeLayout.XConstraint="30" 
+                   RelativeLayout.YConstraint="15"
+               />
+                    </RelativeLayout>
+
+                    <RelativeLayout VerticalOptions="Center" >
+                        <Image Source="{local:ImageResource Test.images.dog.png}" 
+                   WidthRequest="60"
+                   Margin="30,20,0,0"
+                   FlowDirection="LeftToRight"
+                   HorizontalOptions="Start"
+               />
+                        <Label Text="Don't play with fire kids!" FontSize="25" FontAttributes="Bold" Padding="120,50,0,10" TextColor="black"/>
+                    </RelativeLayout>
+
+                    <Label Text="Click on any of the buttons to get started!" FontSize="26" TextColor="black" Padding="20,20,20,0" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="20,0" FontAttributes="Bold,Italic"/>
+
+                    <Grid HorizontalOptions="Center" Padding="0,40,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Column="0"  Grid.Row="0" Spacing="40" Margin="0,0,0,0" HorizontalOptions="Center"  >
+                            <Button Text="911 Call" BackgroundColor="#B22D39" TextColor="White"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="220" FontAttributes="Bold" FontSize="24" HeightRequest="90" Clicked="Calling_OnClicked"/>
+                            <!--<Button Text="Quizzes" BackgroundColor="#B22D39" TextColor="White"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="140" FontAttributes="Bold" FontSize="18" HeightRequest="70"/>
+                <Button Text="Escape Plan" BackgroundColor="#B22D39" TextColor="White" HorizontalOptions="Center" CornerRadius="10" WidthRequest="140" FontAttributes="Bold" FontSize="18" HeightRequest="70"/>-->
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="0" Grid.Row="1" Spacing="40" Margin="0,10,0,0" >
+                            <Button Text="Address" BackgroundColor="#B22D39" TextColor="White" HorizontalOptions="Center" CornerRadius="10" WidthRequest="220" FontAttributes="Bold" FontSize="24" HeightRequest="90" Clicked="btnPopupButton_Clicked"/>
+
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+            <ContentView x:Name="popupLoadingView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200" BackgroundColor="White">
+
+                    <ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
+                    <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>
+                </StackLayout>
+            </StackLayout>
+    </ContentView>
+
+    </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
+
