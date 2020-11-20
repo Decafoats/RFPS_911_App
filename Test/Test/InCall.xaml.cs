@@ -21,5 +21,9 @@ namespace Test
         {
             await Navigation.PushAsync(new MainPage());
         }
+        private async void ScriptClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Script());
+        }
     }
 }

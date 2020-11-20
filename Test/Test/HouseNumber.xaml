@@ -10,7 +10,7 @@
                 <Label Text="Your House Number" 
                    TextColor="White" 
                    HorizontalOptions="CenterAndExpand"
-                   FontSize="38" 
+                   FontSize="34" 
                    FontAttributes="Bold"
                    Margin="0,10,0,10"
                    />
@@ -18,7 +18,7 @@
             <Image Source="{local:ImageResource Test.images.house.png}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,20,0,0" HeightRequest="270" WidthRequest="450"/>
             <Label Text="This is where you'll see your house number. It is usually found on the front of your house! Find your street name on the next screen!" 
                    TextColor="Black" 
-                   FontSize="28" 
+                   FontSize="25" 
                    FontAttributes="Bold"
                    Margin="15,10,15,0"
                    />

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Test"
+             x:Class="Test.Script"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout BackgroundColor="#B22D39">
+                <Label Text="Follow The Script" 
+                       TextColor="White" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="38" 
+                       FontAttributes="Bold"
+                       Margin="0,10,0,10"
+                       />
+            </StackLayout>
+            <StackLayout BackgroundColor="White">
+                <Label VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="StartAndExpand"
+                       FontSize="16" 
+                       FontAttributes="Bold"
+                       Margin="10,10,10,10"
+                       TextColor="Black"
+                       Text="Dispatch: One Moment. Regina Fire Department. How may I help you?&#10;&#10;Caller: There is a fire in my house.&#10;&#10;Dispatch: What is your address?&#10;&#10;Caller: My address is (house number) + (street name)&#10;&#10;Dispatch: Is anyone still in the house? Have you all met at a meeting point?&#10;&#10;Caller: [YES/NO] there [ARE/AREN'T] people in the house. We [HAVE/HAVEN'T] met at a meeting point.&#10;&#10;Dispatch: What is your phone number?&#10;&#10;Caller: My phone number is (---) ---- ----&#10;&#10;Dispatch: Ok, the fire trucks are on their way. Don't go back into the house."
+                       />
+                <Button Text="Back" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="10" WidthRequest="100" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="18,0,0,18" Clicked="BackClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

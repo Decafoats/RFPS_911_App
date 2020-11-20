@@ -17,8 +17,13 @@
                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
                 <ImageButton Source="{local:ImageResource Test.images.endPhone.png}" Margin="0,0,0,110" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="75" WidthRequest="75" BackgroundColor="Transparent" Clicked="EndClicked"/>
             </Grid>
+
+            <Button Text="Script" BackgroundColor="#B22D39" TextColor="White" CornerRadius="10" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="0,0,18,18" 
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.70}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.87}"
+                    Clicked="ScriptClicked"/>
+
         </RelativeLayout>
-        
-        
+
     </ContentPage.Content>
 </ContentPage>
