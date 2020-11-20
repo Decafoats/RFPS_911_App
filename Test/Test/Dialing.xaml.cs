@@ -11,14 +11,17 @@ using Xamarin.Forms.Xaml;
 namespace Test
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class Dialing : ContentPage
     {
-        string numberText = "";
+        public string numberText = "";
+        public int failCount = 0;
+        public int numCount = 0;
         public Dialing()
         {
             InitializeComponent();
         }
-    void OneClicked(object sender, EventArgs e)
+        private void OneClicked(object sender, EventArgs e)
         {
                 if (numberText == "9" || numberText == "91")
                 {              
@@ -26,14 +29,19 @@ namespace Test
                     numberText += newNum;
                     number.Text = $"{numberText}";
                     buttonOne.BorderColor = Color.Green;
+                    numCount += 1;
+                    Failed(failCount, numCount, e);
             }
                 else
                 {
                     buttonOne.BorderColor = Color.Red;
-                }
+                    failCount += 1;
+                    numCount += 1;
+                    Failed(failCount, numCount,e);
+            }
         }
 
-        void NineClicked(object sender, EventArgs e)
+        private void NineClicked(object sender, EventArgs e)
         {
             char newNum = '9';
             if (numberText == "")
@@ -41,52 +49,87 @@ namespace Test
                 numberText += newNum;
                 number.Text = $"{numberText}";
                 buttonNine.BorderColor = Color.Green;
+                numCount += 1;
+                Failed(failCount, numCount, e);
             }
             else
             {
                 buttonNine.BorderColor = Color.Red;
+                failCount += 1;
+                numCount += 1;
+                Failed(failCount, numCount, e);
             }
         }
-        void TwoClicked(object sender, EventArgs e)
+        private void TwoClicked(object sender, EventArgs e)
         {
             buttonTwo.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void ThreeClicked(object sender, EventArgs e)
+        private void ThreeClicked(object sender, EventArgs e)
         {
             buttonThree.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void FourClicked(object sender, EventArgs e)
+        private void FourClicked(object sender, EventArgs e)
         {
             buttonFour.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void FiveClicked(object sender, EventArgs e)
+        private void FiveClicked(object sender, EventArgs e)
         {
             buttonFive.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void SixClicked(object sender, EventArgs e)
+        private void SixClicked(object sender, EventArgs e)
         {
             buttonSix.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void SevenClicked(object sender, EventArgs e)
+        private void SevenClicked(object sender, EventArgs e)
         {
             buttonSeven.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void EightClicked(object sender, EventArgs e)
+        private void EightClicked(object sender, EventArgs e)
         {
             buttonEight.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void ZeroClicked(object sender, EventArgs e)
+        private void ZeroClicked(object sender, EventArgs e)
         {
             buttonZero.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        void StarClicked(object sender, EventArgs e)
+        private void StarClicked(object sender, EventArgs e)
         {
             buttonStar.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
         }
-        //void HashClicked(object sender, EventArgs e)
-        //{
-        //    buttonHash.BorderColor = Color.Red;
-        //}
+        private void HashClicked(object sender, EventArgs e)
+        {
+            buttonHash.BorderColor = Color.Red;
+            failCount += 1;
+            numCount += 1;
+            Failed(failCount, numCount, e);
+        }
         private async void PhoneClicked(object sender, EventArgs e)
         {
             if (numberText == "911")
@@ -96,14 +139,36 @@ namespace Test
             else
             {
                 buttonPhone.BorderColor = Color.Red;
+                Popup(e);
             }
 
         }
-        private void HashClicked(object sender, EventArgs e)
+        private void Failed( int newCount1, int newCount2, EventArgs e)
         {
-            popupLoadingView.IsVisible = true;
-            activityIndicator.IsRunning = true;
+            int newFailCount = newCount1;
+            int newNumCount = newCount2;
+            if (newFailCount == 3 || (newNumCount == 3 && numberText != "911"))
+            {
+                Popup(e);
+            }
+        }
 
+        private void Popup(EventArgs e)
+        {
+            popupView.IsVisible = true;
+            //activityIndicator.IsRunning = true;
+        }
+
+        private void tryAgain(object sender, EventArgs e)
+        {
+            var vUpdatedPage = new Dialing(); 
+            Navigation.InsertPageBefore(vUpdatedPage, this); 
+            Navigation.PopAsync();
+        }
+
+        private async void CancelClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
