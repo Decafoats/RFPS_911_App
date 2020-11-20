@@ -77,16 +77,33 @@
                     </StackLayout>
                 </StackLayout>
 
-            <ContentView x:Name="popupView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <ContentView x:Name="popupFailedView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Frame CornerRadius="20"  
                             OutlineColor="#B22D39" 
                             Padding="0">
                         <StackLayout Orientation="Vertical" HeightRequest="400" WidthRequest="200" BackgroundColor="#B22D39">
 
-                            <Image x:Name="imgPopup" Source="{local:ImageResource Test.images.dog.png}" HeightRequest="200" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="#B22D39" Margin="0,20,0,5" ></Image>
-                            <Label x:Name="lblLoadingText" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Uh oh, looks like you dialed the WRONG number!" Margin="10,0,10,0" FontAttributes="Bold" FontSize="20"></Label>
-                            <Button Text="Try Again!" TextColor="White"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" HeightRequest="50" FontSize="20" BackgroundColor="Green" FontAttributes="Bold" Margin="0,10,0,0" Clicked="tryAgain"></Button>
+                            <Image Source="{local:ImageResource Test.images.dog.png}" HeightRequest="200" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="#B22D39" Margin="0,20,0,5" ></Image>
+                            <Label TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Uh oh, looks like you dialed the WRONG number!" Margin="10,0,10,0" FontAttributes="Bold" FontSize="20"></Label>
+                            <Button Text="Try Again!" TextColor="White"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" HeightRequest="50" FontSize="20" BackgroundColor="Green" FontAttributes="Bold" Margin="0,10,0,0" Clicked="TryAgain"></Button>
+                            <!--<ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
+                        <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>-->
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView x:Name="popupSuccessView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Frame CornerRadius="20"  
+                            OutlineColor="Green" 
+                            Padding="0">
+                        <StackLayout Orientation="Vertical" HeightRequest="400" WidthRequest="200" BackgroundColor="Green">
+
+                            <Image Source="{local:ImageResource Test.images.dog.png}" HeightRequest="200" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="Green" Margin="0,20,0,5" ></Image>
+                            <Label TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Good Job! Now you can call 911!" Margin="10,0,10,0" FontAttributes="Bold" FontSize="20"></Label>
+                            <Button Text="OK!" TextColor="Black"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" HeightRequest="50" FontSize="20" BackgroundColor="White" FontAttributes="Bold" Margin="0,10,0,0" Clicked="OkClicked"></Button>
                             <!--<ActivityIndicator x:Name="activityIndicator" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" WidthRequest="30" HeightRequest="30" ></ActivityIndicator>
                         <Label x:Name="lblLoadingText" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Loading..."></Label>-->
                         </StackLayout>

@@ -19,6 +19,7 @@
     <None Remove="images\five.png" />
     <None Remove="images\four.png" />
     <None Remove="images\hash.png" />
+    <None Remove="images\house.png" />
     <None Remove="images\nine.png" />
     <None Remove="images\one.png" />
     <None Remove="images\phone.png" />
@@ -26,6 +27,7 @@
     <None Remove="images\seven.png" />
     <None Remove="images\six.png" />
     <None Remove="images\star.png" />
+    <None Remove="images\street.png" />
     <None Remove="images\three.png" />
     <None Remove="images\two.png" />
     <None Remove="images\zero.png" />
@@ -40,6 +42,7 @@
     <EmbeddedResource Include="images\five.png" />
     <EmbeddedResource Include="images\four.png" />
     <EmbeddedResource Include="images\hash.png" />
+    <EmbeddedResource Include="images\house.png" />
     <EmbeddedResource Include="images\nine.png" />
     <EmbeddedResource Include="images\one.png" />
     <EmbeddedResource Include="images\phone.png" />
@@ -47,6 +50,7 @@
     <EmbeddedResource Include="images\seven.png" />
     <EmbeddedResource Include="images\six.png" />
     <EmbeddedResource Include="images\star.png" />
+    <EmbeddedResource Include="images\street.png" />
     <EmbeddedResource Include="images\three.png" />
     <EmbeddedResource Include="images\two.png" />
     <EmbeddedResource Include="images\zero.png" />
@@ -65,7 +69,13 @@
     <EmbeddedResource Update="Dialing.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="HouseNumber.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="InCall.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="StreetName.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

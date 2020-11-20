@@ -130,16 +130,21 @@ namespace Test
             numCount += 1;
             Failed(failCount, numCount, e);
         }
-        private async void PhoneClicked(object sender, EventArgs e)
+        private void PhoneClicked(object sender, EventArgs e)
         {
+            //if (newNumCount == 3 && numberText == "911")
+            //{
+            //    PopupSuccess(e);
+            //}
+
             if (numberText == "911")
             {
-                await Navigation.PushAsync(new InCall());
+                PopupSuccess(e);
             }
             else
             {
                 buttonPhone.BorderColor = Color.Red;
-                Popup(e);
+                PopupFail(e);
             }
 
         }
@@ -149,17 +154,22 @@ namespace Test
             int newNumCount = newCount2;
             if (newFailCount == 3 || (newNumCount == 3 && numberText != "911"))
             {
-                Popup(e);
+                PopupFail(e);
             }
         }
 
-        private void Popup(EventArgs e)
+        private void PopupFail(EventArgs e)
         {
-            popupView.IsVisible = true;
-            //activityIndicator.IsRunning = true;
+            popupFailedView.IsVisible = true;
         }
 
-        private void tryAgain(object sender, EventArgs e)
+        private void PopupSuccess(EventArgs e)
+        {
+            popupSuccessView.IsVisible = true;
+            
+        }
+
+        private void TryAgain(object sender, EventArgs e)
         {
             var vUpdatedPage = new Dialing(); 
             Navigation.InsertPageBefore(vUpdatedPage, this); 
@@ -169,6 +179,11 @@ namespace Test
         private async void CancelClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
+        }
+
+        private async void OkClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new InCall());
         }
     }
 }

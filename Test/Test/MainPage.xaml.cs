@@ -19,6 +19,10 @@ namespace Test
         {
             await Navigation.PushAsync(new Calling());
         }
+        private async void AddressClicked (object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HouseNumber());
+        }
 
     }
 }

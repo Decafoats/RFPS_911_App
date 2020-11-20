@@ -4,9 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test.MainPage" BackgroundColor="white"
              NavigationPage.HasNavigationBar="false">
-
     <ContentPage.Content>
-
         <StackLayout>
             <RelativeLayout VerticalOptions="Center" Padding ="10" BackgroundColor="#B22D39">
                 <Label Text="Fire Force" 
@@ -51,7 +49,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Column="0" Grid.Row="1" Spacing="40" Margin="0,10,0,0" >
-                    <Button Text="Address" BackgroundColor="#B22D39" TextColor="White" HorizontalOptions="Center" CornerRadius="10" WidthRequest="220" FontAttributes="Bold" FontSize="24" HeightRequest="90" />
+                    <Button Text="Address" BackgroundColor="#B22D39" TextColor="White" HorizontalOptions="Center" CornerRadius="10" WidthRequest="220" FontAttributes="Bold" FontSize="24" HeightRequest="90" Clicked="AddressClicked"/>
 
                 </StackLayout>
             </Grid>
