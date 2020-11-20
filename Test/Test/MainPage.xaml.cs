@@ -19,11 +19,6 @@ namespace Test
         {
             await Navigation.PushAsync(new Calling());
         }
-        private void btnPopupButton_Clicked(object sender, EventArgs e)
-        {
-            popupLoadingView.IsVisible = true;
-            activityIndicator.IsRunning = true;
 
-        }
     }
 }

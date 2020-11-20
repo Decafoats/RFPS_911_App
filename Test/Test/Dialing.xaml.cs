@@ -83,10 +83,10 @@ namespace Test
         {
             buttonStar.BorderColor = Color.Red;
         }
-        void HashClicked(object sender, EventArgs e)
-        {
-            buttonHash.BorderColor = Color.Red;
-        }
+        //void HashClicked(object sender, EventArgs e)
+        //{
+        //    buttonHash.BorderColor = Color.Red;
+        //}
         private async void PhoneClicked(object sender, EventArgs e)
         {
             if (numberText == "911")
@@ -97,6 +97,12 @@ namespace Test
             {
                 buttonPhone.BorderColor = Color.Red;
             }
+
+        }
+        private void HashClicked(object sender, EventArgs e)
+        {
+            popupLoadingView.IsVisible = true;
+            activityIndicator.IsRunning = true;
 
         }
     }
