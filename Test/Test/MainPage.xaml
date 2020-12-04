@@ -7,9 +7,9 @@
     <ContentPage.Content>
         <StackLayout>
             <RelativeLayout VerticalOptions="Center" Padding ="10" BackgroundColor="#B22D39">
-                <Label Text="Fire Force" 
+                <Label Text="    Regina Fire &amp;&#10;Protective Services" 
                    TextColor="White" 
-                   FontSize="36" 
+                   FontSize="30" 
                    FontAttributes="Bold"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
                    RelativeLayout.YConstraint="25"
@@ -28,7 +28,7 @@
                    FlowDirection="LeftToRight"
                    HorizontalOptions="Start"
                />
-                <Label Text="Don't play with fire kids!" FontSize="25" FontAttributes="Bold" Padding="120,50,0,10" TextColor="black"/>
+                <Label Text="Create and practice a fire escape plan" FontSize="25" FontAttributes="Bold" Padding="120,50,0,10" TextColor="black"/>
             </RelativeLayout>
 
             <Label Text="Click on any of the buttons to get started!" FontSize="26" TextColor="black" Padding="20,20,20,0" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="20,0" FontAttributes="Bold,Italic"/>

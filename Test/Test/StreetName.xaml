@@ -33,7 +33,7 @@
                     <Button Text="Previous" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="10" WidthRequest="120" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="18,0,0,18" Clicked="PreviousClicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-                    <Button Text="Home" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" CornerRadius="10" WidthRequest="120" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="0,0,18,18" Clicked="HomeClicked" />
+                    <Button Text="Exit" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" CornerRadius="10" WidthRequest="120" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="0,0,18,18" Clicked="HomeClicked" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

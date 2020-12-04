@@ -18,11 +18,11 @@
             <StackLayout BackgroundColor="White">
                 <Label VerticalOptions="StartAndExpand" 
                        HorizontalOptions="StartAndExpand"
-                       FontSize="16" 
+                       FontSize="18" 
                        FontAttributes="Bold"
                        Margin="10,10,10,10"
                        TextColor="Black"
-                       Text="Dispatch: One Moment. Regina Fire Department. How may I help you?&#10;&#10;Caller: There is a fire in my house.&#10;&#10;Dispatch: What is your address?&#10;&#10;Caller: My address is (house number) + (street name)&#10;&#10;Dispatch: Is anyone still in the house? Have you all met at a meeting point?&#10;&#10;Caller: [YES/NO] there [ARE/AREN'T] people in the house. We [HAVE/HAVEN'T] met at a meeting point.&#10;&#10;Dispatch: What is your phone number?&#10;&#10;Caller: My phone number is (---) ---- ----&#10;&#10;Dispatch: Ok, the fire trucks are on their way. Don't go back into the house."
+                       Text="Dispatch: Regina Fire &amp; Protective Services. What is your emergency?&#10;&#10;Caller: There is a fire in my house.&#10;&#10;Dispatch: What is your address?&#10;&#10;Caller: My address is (house number) + (street name)&#10;&#10;Dispatch: Is everyone out of the house and at the family meeting place?&#10;&#10;Caller: YES.&#10;&#10;Dispatch: Great. The fire trucks are on their way. Don't go back in the house for any reason."
                        />
                 <Button Text="Back" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="10" WidthRequest="100" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="18,0,0,18" Clicked="BackClicked" />
             </StackLayout>
