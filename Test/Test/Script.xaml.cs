@@ -18,7 +18,7 @@ namespace Test
         }
         private async void BackClicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new MainPage());
         }
     }
 

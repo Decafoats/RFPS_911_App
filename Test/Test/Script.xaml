@@ -24,7 +24,7 @@
                        TextColor="Black"
                        Text="Dispatch: Regina Fire &amp; Protective Services. What is your emergency?&#10;&#10;Caller: There is a fire in my house.&#10;&#10;Dispatch: What is your address?&#10;&#10;Caller: My address is (house number) + (street name)&#10;&#10;Dispatch: Is everyone out of the house and at the family meeting place?&#10;&#10;Caller: YES.&#10;&#10;Dispatch: Great. The fire trucks are on their way. Don't go back in the house for any reason."
                        />
-                <Button Text="Back" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="10" WidthRequest="100" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="18,0,0,18" Clicked="BackClicked" />
+                <Button Text="Main" BackgroundColor="#B22D39" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="10" WidthRequest="100" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="18,0,0,18" Clicked="BackClicked" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

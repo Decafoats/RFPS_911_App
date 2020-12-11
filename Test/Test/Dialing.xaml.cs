@@ -132,7 +132,7 @@ namespace Test
         }
         private void PhoneClicked(object sender, EventArgs e)
         {
-            if (numberText == "911")
+            if (numberText == "911" && failCount == 0)
             {
                 Calling(sender,e);
             }

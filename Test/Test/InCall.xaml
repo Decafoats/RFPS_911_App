@@ -16,7 +16,7 @@
 
                 <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
-                    <ImageButton Source="{local:ImageResource Test.images.endPhone.png}" Margin="0,0,0,110" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="75" WidthRequest="75" BackgroundColor="Transparent" Clicked="EndClicked"/>
+                    <ImageButton Source="{local:ImageResource Test.images.endPhone.png}" Margin="0,0,0,110" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="75" WidthRequest="75" BackgroundColor="Transparent"/>
                 </Grid>
 
             </RelativeLayout>

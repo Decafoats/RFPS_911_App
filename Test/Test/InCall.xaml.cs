@@ -21,10 +21,7 @@ namespace Test
             await Task.Delay(3200);
             PopupSuccess();
         }
-        private async void EndClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
+
         private async void ScriptClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Script());
