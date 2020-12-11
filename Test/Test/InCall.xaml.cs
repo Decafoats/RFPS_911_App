@@ -16,7 +16,11 @@ namespace Test
         {
             InitializeComponent();
         }
-
+        protected override async void OnAppearing()
+        {
+            await Task.Delay(3200);
+            PopupSuccess();
+        }
         private async void EndClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
@@ -24,6 +28,12 @@ namespace Test
         private async void ScriptClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Script());
+        }
+
+        private void PopupSuccess()
+        {
+            popupSuccessView.IsVisible = true;
+
         }
     }
 }

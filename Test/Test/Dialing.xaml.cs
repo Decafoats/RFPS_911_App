@@ -132,14 +132,9 @@ namespace Test
         }
         private void PhoneClicked(object sender, EventArgs e)
         {
-            //if (newNumCount == 3 && numberText == "911")
-            //{
-            //    PopupSuccess(e);
-            //}
-
             if (numberText == "911")
             {
-                PopupSuccess(e);
+                Calling(sender,e);
             }
             else
             {
@@ -163,12 +158,6 @@ namespace Test
             popupFailedView.IsVisible = true;
         }
 
-        private void PopupSuccess(EventArgs e)
-        {
-            popupSuccessView.IsVisible = true;
-            
-        }
-
         private void TryAgain(object sender, EventArgs e)
         {
             var vUpdatedPage = new Dialing(); 
@@ -181,7 +170,7 @@ namespace Test
             await Navigation.PushAsync(new MainPage());
         }
 
-        private async void OkClicked(object sender, EventArgs e)
+        private async void Calling(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new InCall());
         }

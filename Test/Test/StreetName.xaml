@@ -16,13 +16,13 @@
                    />
             </StackLayout>
             <Image Source="{local:ImageResource Test.images.street.png}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,20,0,0" HeightRequest="250" WidthRequest="380"/>
-            <Label Text="This is where you'll see your street name! Pick the street name that your house is on, along the direction of the sign! In this case, we'll pick Rae Street!" 
+            <Label Text="This is where you'll see your street name. Pick the street name that your house is on, along the direction of the sign. In this case, we'll pick Rae Street." 
                    TextColor="Black" 
                    FontSize="20" 
                    FontAttributes="Bold"
                    Margin="15,10,15,0"
                    />
-            <Label Text="Therefore, the address is 2661 Rae Street!"
+            <Label Text="Therefore, the address is 2661 Rae Street."
                    TextColor="Black" 
                    FontSize="25" 
                    FontAttributes="Bold"

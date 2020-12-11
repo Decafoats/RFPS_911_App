@@ -5,25 +5,37 @@
              x:Class="Test.InCall"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <RelativeLayout >
-            <Image Source="{local:ImageResource Test.images.callingScreen.png}"
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <RelativeLayout >
+                <Image Source="{local:ImageResource Test.images.callingScreen.png}"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
                    Aspect="AspectFill"
                    >
-            </Image>
+                </Image>
 
-            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
-                <ImageButton Source="{local:ImageResource Test.images.endPhone.png}" Margin="0,0,0,110" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="75" WidthRequest="75" BackgroundColor="Transparent" Clicked="EndClicked"/>
-            </Grid>
+                    <ImageButton Source="{local:ImageResource Test.images.endPhone.png}" Margin="0,0,0,110" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="75" WidthRequest="75" BackgroundColor="Transparent" Clicked="EndClicked"/>
+                </Grid>
 
-            <Button Text="Script" BackgroundColor="#B22D39" TextColor="White" CornerRadius="10" FontAttributes="Bold" FontSize="20" HeightRequest="50" Margin="0,0,18,18" 
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.70}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.87}"
-                    Clicked="ScriptClicked"/>
+            </RelativeLayout>
 
-        </RelativeLayout>
+            <ContentView x:Name="popupSuccessView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Frame CornerRadius="20"  
+                            OutlineColor="Green" 
+                            Padding="0">
+                        <StackLayout Orientation="Vertical" HeightRequest="400" WidthRequest="200" BackgroundColor="Green">
 
+                            <Image Source="{local:ImageResource Test.images.dog.png}" HeightRequest="200" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="Green" Margin="0,20,0,5" ></Image>
+                            <Label TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Good Job. Now tell the dispatcher that there is a fire." Margin="10,0,10,0" FontAttributes="Bold" FontSize="20"></Label>
+                            <Button Text="SCRIPT" TextColor="Black"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" HeightRequest="50" FontSize="20" BackgroundColor="White" FontAttributes="Bold" Margin="0,10,0,0" Clicked="ScriptClicked"></Button>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ContentView>
+            
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
