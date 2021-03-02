@@ -3,6 +3,7 @@
              xmlns:local="clr-namespace:Test"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test.HouseNumber"
+             BackgroundColor="white"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>

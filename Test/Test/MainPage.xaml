@@ -2,22 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:local="clr-namespace:Test"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Test.MainPage" BackgroundColor="white"
+             x:Class="Test.MainPage" 
+             BackgroundColor="white"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
             <RelativeLayout VerticalOptions="Center" Padding ="11" BackgroundColor="#B22D39">
-                <Label Text="    Regina Fire &amp;&#10;Protective Services" 
-                   TextColor="White" 
-                   FontSize="30" 
+
+                <Label Text="Regina Fire &amp;&#10;Protective Services" 
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="26" 
                    FontAttributes="Bold"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.33}"
                    RelativeLayout.YConstraint="25"
                    />
-                <Image Source="{local:ImageResource Test.images.fireLogo.png}" 
+                <Image Source="{local:ImageResource Test.images.fireLogo.png} " 
                    WidthRequest="80"
                    RelativeLayout.XConstraint="30" 
                    RelativeLayout.YConstraint="15"
+                   BackgroundColor="Transparent"
                />
             </RelativeLayout>
 
