@@ -4,8 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Test.MainPage" 
              BackgroundColor="white"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
@@ -24,7 +23,7 @@
                    WidthRequest="80"
                    RelativeLayout.XConstraint="30" 
                    RelativeLayout.YConstraint="15"
-                   BackgroundColor="Transparent"
+                   BackgroundColor="#B22D39"
                />
             </RelativeLayout>
 

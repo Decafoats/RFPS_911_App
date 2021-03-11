@@ -4,9 +4,10 @@
              xmlns:local="clr-namespace:Test"
              x:Class="Test.StreetName" 
              BackgroundColor="white"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
             <StackLayout BackgroundColor="#B22D39">
                 <Label Text="Your Street Name" 
                    TextColor="White" 
