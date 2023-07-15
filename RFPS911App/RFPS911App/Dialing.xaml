@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:RFPS911App"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RFPS911App.Dialing" BackgroundColor="white"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                    <Label Text="Emergency Call" FontSize="20" TextColor="red" Padding="35,30,35,0" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="20,0"/>
+                    <Label x:Name="number" 
+                   Text="" 
+                   FontSize="22" 
+                   TextColor="Black" 
+                   Padding="0" 
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" 
+                   Margin="20,0"/>
+
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Grid HorizontalOptions="Center" Padding="0,5,0,-10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Column="0" Grid.Row="0" Spacing="20" Margin="45,0,0,0">
+                            <ImageButton x:Name="buttonOne" Source="{local:ImageResource RFPS911App.images.one.png}" CornerRadius="39" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="OneClicked" BorderWidth="3" ></ImageButton>
+                                <ImageButton x:Name="buttonFour" Source="{local:ImageResource RFPS911App.images.four.png}"  HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="FourClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonSeven" Source="{local:ImageResource RFPS911App.images.seven.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="SevenClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonStar" Source="{local:ImageResource RFPS911App.images.star.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="StarClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                            </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="0" Spacing="20" Margin="0,0,0,0">
+                            <ImageButton x:Name="buttonTwo" Source="{local:ImageResource RFPS911App.images.two.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="TwoClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonFive" Source="{local:ImageResource RFPS911App.images.five.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="FiveClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonEight" Source="{local:ImageResource RFPS911App.images.eight.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="EightClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonZero" Source="{local:ImageResource RFPS911App.images.zero.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="ZeroClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonPhone" Source="{local:ImageResource RFPS911App.images.phone.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="PhoneClicked" CornerRadius="38" BorderWidth="3"></ImageButton>
+                            </StackLayout>
+
+                        <StackLayout Grid.Column="2" Grid.Row="0" Spacing="20" Margin="0,0,45,0">
+                            <ImageButton x:Name="buttonThree" Source="{local:ImageResource RFPS911App.images.three.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="ThreeClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonSix" Source="{local:ImageResource RFPS911App.images.six.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="SixClicked" CornerRadius="39" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonNine" Source="{local:ImageResource RFPS911App.images.nine.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" CornerRadius="39" BackgroundColor="#FFFFFF" Clicked="NineClicked" BorderWidth="3"></ImageButton>
+                                <ImageButton x:Name="buttonHash" Source="{local:ImageResource RFPS911App.images.hash.png}" HeightRequest="75" WidthRequest="75" HorizontalOptions="Center" BackgroundColor="#FFFFFF" Clicked="HashClicked" CornerRadius="39" BorderWidth="3" ></ImageButton>
+                            </StackLayout>
+                        </Grid>
+                        
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal"  HorizontalOptions="FillAndExpand" >
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                            <Button Text="* Medical ID" TextColor="Red"  HorizontalOptions="StartAndExpand" WidthRequest="140"  FontSize="16" BackgroundColor="white" Margin="30,20,0,30"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                        <Button Text="Cancel" TextColor="Black" HorizontalOptions="EndAndExpand" WidthRequest="140"  FontSize="16" BackgroundColor="White" Clicked="CancelClicked" Margin="0,20,30,30" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            <ContentView x:Name="popupFailedView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Frame CornerRadius="20"  
+                            OutlineColor="#B22D39" 
+                            Padding="0">
+                        <StackLayout Orientation="Vertical" HeightRequest="400" WidthRequest="200" BackgroundColor="#B22D39">
+
+                            <Image Source="{local:ImageResource RFPS911App.images.dog.png}" HeightRequest="200" WidthRequest="100" HorizontalOptions="Center" BackgroundColor="#B22D39" Margin="0,20,0,5" ></Image>
+                            <Label TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Uh oh, looks like you dialed the WRONG number" Margin="10,0,10,0" FontAttributes="Bold" FontSize="20"></Label>
+                            <Button Text="Try Again" TextColor="White"  HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" HeightRequest="50" FontSize="20" BackgroundColor="Green" FontAttributes="Bold" Margin="0,10,0,0" Clicked="TryAgain"></Button>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ContentView>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

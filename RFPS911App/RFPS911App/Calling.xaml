@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:RFPS911App"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RFPS911App.Calling" BackgroundColor="#020d12"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true"
+             NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Touch ID or Enter Passcode" FontSize="22" TextColor="white" Padding="35,60,35,0" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="20,0"/>
+            <Entry Placeholder="o   o   o   o   o"  HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" PlaceholderColor="#FFFFFF" TextColor="#FFFFFF" IsReadOnly="True"  />
+
+            <Grid HorizontalOptions="Fill" Padding="0,15,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Spacing="20" Margin="40,0,0,0"  >
+                    <Button Text="1" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="4" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="7" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0" Spacing="20" Margin="0,0,0,0"  >
+                    <Button Text="2" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="5" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="8" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="0" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="0" Spacing="20" Margin="0,0,40,0"  >
+                    <Button Text="3" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="6" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                    <Button Text="9" TextColor="white"  HorizontalOptions="Center" CornerRadius="40" WidthRequest="80" HeightRequest="80" FontSize="35" BorderColor="#FFFFFF" BackgroundColor="#020d12" BorderWidth="1.5"  />
+                </StackLayout>
+            </Grid>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                    <Button Text="Emergency" TextColor="white"  HorizontalOptions="StartAndExpand" WidthRequest="140"  FontSize="16" BackgroundColor="#020d12" Margin="30,20,0,30" Clicked="Dial_OnClicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                    <Button Text="Cancel" TextColor="white" HorizontalOptions="EndAndExpand" WidthRequest="140"  FontSize="16" BackgroundColor="#020d12" Margin="0,20,30,30" />
+                </StackLayout>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
