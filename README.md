@@ -36,9 +36,9 @@ The primary objective of this project is to empower children with the knowledge 
 ## ⚙ Tech Stack
 
 - Xamarin Forms 
-- .NET 7, 
+- .NET 5, 
 - C#
-- Visual Studio 2022
+- Visual Studio 2019
 - Android Studios
 
 
