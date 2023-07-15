@@ -13,7 +13,7 @@ The primary objective of this project is to empower children with the knowledge 
   <br />
   <br />
   <p style="padding-right:150;">
-   The Address Page is crucial in the application: empowering children to identify and memorize their home addresses confidently. The page introduces children to street names and house numbers through engaging visuals, enabling them to construct their addresses independently. This skill is invaluable in emergencies, as they can readily relay their address to emergency responders when needed.
+   The Address Page is an important application component, as it helps children confidently learn and remember their home addresses. The page uses realistic visuals to introduce children to street names and house numbers, which helps them to construct their addresses independently. This is a valuable skill for emergency situations, as children can quickly provide their addresses to emergency responders when needed.
   </p>
 </div>
 
@@ -27,7 +27,7 @@ The primary objective of this project is to empower children with the knowledge 
   <br />
   <br />
   <p style="padding-right:150;">
-   The 911 call function serves as a lifelike mobile phone simulator, imparting essential knowledge on utilizing the emergency call feature to dial 911. Starting with a lock screen, children are challenged to locate the emergency call button at the bottom of the interface, proceeding to accurately input 911 and press the call button to connect with emergency responders. A guiding script appears within moments, empowering the child to follow along and effectively communicate critical information during emergencies confidently.
+   The 911 call function serves as a lifelike mobile phone simulator, imparting essential knowledge on utilizing the emergency call feature to dial 911. Starting with a lock screen, children are challenged to locate the emergency call button at the bottom of the interface, proceeding to accurately input 911 and press the call button to connect with emergency responders. A guiding script appears within moments, empowering the child to confidently follow along and effectively communicate critical information during emergencies.
   </p>
 </div>
 
